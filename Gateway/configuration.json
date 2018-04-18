@@ -1,0 +1,133 @@
+﻿{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/Asset",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "api.example.com",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/Asset",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000,
+        "TimeoutValue": 5000
+      },
+      "FileCacheOptions": {
+        "TtlSeconds": 15
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Category",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "api.example.com",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/Category",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000,
+        "TimeoutValue": 5000
+      },
+      "FileCacheOptions": {
+        "TtlSeconds": 15
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Asset",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "api.example.com",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/Asset",
+      "UpstreamHttpMethod": [ "Post" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000,
+        "TimeoutValue": 5000
+      },
+      "FileCacheOptions": {
+        "TtlSeconds": 15
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Category",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "api.example.com",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/Category",
+      "UpstreamHttpMethod": [ "Post" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000,
+        "TimeoutValue": 5000
+      },
+      "FileCacheOptions": {
+        "TtlSeconds": 15
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Category/{categoryId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "api.example.com",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/Category/{categoryId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000,
+        "TimeoutValue": 5000
+      },
+      "FileCacheOptions": {
+        "TtlSeconds": 15
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Asset/{assetId}",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "api.example.com",
+          "Port": 443
+        }
+      ],
+      "UpstreamPathTemplate": "/Asset/{assetId}",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QoSOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10000,
+        "TimeoutValue": 5000
+      },
+      "FileCacheOptions": {
+        "TtlSeconds": 15
+      }
+    }
+
+
+  ],
+  "GlobalConfiguration": {
+    "RequestIdKey": "OcRequestId",
+    "AdministrationPath": "/administration",
+    "ServiceDiscoveryProvider": {
+      "Type": "Steeltoe"
+    }
+  }
+}

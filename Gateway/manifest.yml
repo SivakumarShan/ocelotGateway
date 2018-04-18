@@ -1,0 +1,10 @@
+---
+applications:
+- name: ocelot_gateway
+  memory: 512M
+  instances: 1
+  buildpack: dotnet_core_buildpack_offline_latest
+  disk_quota: 1024M
+  stack: cflinuxfs2
+services:
+ - ncoreratRegistry
